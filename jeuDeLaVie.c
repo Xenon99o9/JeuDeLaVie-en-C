@@ -14,18 +14,19 @@ void afficherGrille(char *grille);
 int voisinVivant(char* grille, int h, int l);
 char* nextGen(char* grille);
 void attendre(int secondes);
+int lancerPartie();
 
 int main(){
 
-    int startLARGEUR = LARGEUR/2;
-    int startHAUTEUR = HAUTEUR/2;
+    lancerPartie();
+    return 0;
+}
 
-
+int lancerPartie(){
     char* grille = creeRandomGrille();
 
     if (grille != NULL){
 
-        grille[startHAUTEUR * LARGEUR + startLARGEUR] = ' ';
 
         for (int i = 0; i < REPETITION; i++){
             printf("Génération %d:\n", i);
@@ -43,8 +44,7 @@ int main(){
     } else {
         return EXIT_FAILURE;
     }
-    
-    return 0;
+
 }
 
 char* nextGen(char* grille){
