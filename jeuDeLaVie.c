@@ -8,6 +8,7 @@
 #define POURCENTAGE 20
 #define TEMPS 1
 
+
 char* creeGrille();
 char* creeRandomGrille();
 void afficherGrille(char *grille);
@@ -17,10 +18,13 @@ void attendre(int secondes);
 int lancerPartie();
 
 int main(){
+    
 
     lancerPartie();
     return 0;
 }
+
+void selectionJeu(){}
 
 int lancerPartie(){
     char* grille = creeRandomGrille();
